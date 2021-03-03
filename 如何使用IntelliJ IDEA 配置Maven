@@ -1,0 +1,46 @@
+https://blog.csdn.net/westos_linux/article/details/78968012
+ IDEA 全称 IntelliJ IDEA，是java语言开发的集成环境，IntelliJ在业界被公认为最好的Java开发工具之一, IDEA是JetBrains公司的产品,现在有逐步取代老牌Java开发工具Eclipse的趋势.那本人也是从Eclipse 转到IDEA.那刚转换过来时,确实很不适应,不过好在坚持使用了几天后,确实感觉IntelliJ IDEA比Eclipse更加智能.
+    Maven项目对象模型(POM)，是一个项目管理工具可以通过一小段描述信息来管理项目的构建，报告和文档的软件。那我们想要在IDEA中使用Maven得进行一些配置,那接下来
+我们具体看一下是如何配置使用的?
+一、 首先我们得去Maven的官网去下载Maven 网址: http://maven.apache.org/download.cgi
+
+二、 进入Maven官网后如下图点击下载
+
+
+三、解压此Maven的压缩包,注意不要解压到中文路径下,切记!!! 如图
+
+
+四、 解压完后,Maven这个工具就算安装好了,但是我们还需要配置一下Maven的环境变量
+
+五、此电脑——右键——属性——高级系统设置——环境变量——系统变量——新建——变量名和变量值
+
+
+六、 在系统变量PATH中引入你配置的变量名:  MAVAEN_HOME%MAVEN_HOME%\bin;
+
+
+
+七、下面我们配置一下Maven的本地仓库路径,首先找到解压Maven的目录
+
+找到conf-——settings.xml这个配置文件打开
+
+
+打开settings.xml 配置文件 选一个本地的目录作为Maven本地仓库将配置好
+
+<localRepository>D:\my_maven_local_repository</localRepository>
+
+
+八、 至此我们的Maven工具就算安装并配置好了.
+
+九、接下来我们看下Maven如何在Intellij IDEA中设置?首先打开IDEA 选择File——Settings
+
+
+
+十、我们还可以在勾选一些其他选项
+
+
+十一、 我们可以更新一下本地仓库和远程仓库,这个样在pom.xml文件中添加依赖jia包的坐标时就可以很好的提示出来.
+
+
+————————————————
+版权声明：本文为CSDN博主「西部开源教育」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/westos_linux/article/details/78968012
